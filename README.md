@@ -13,6 +13,6 @@ All files are converted from original scanned jp2, if available, to eps, using [
 
 ## license
 
-The original authors are long dead, and all copyright has expired (I'm not a lawyer but if someone from 1880 shows up to complain I'll gladly take a piece down, and run screaming after). I don't think simply converting between formats changes that, so the stuff in this repo should still be the public domain and ready for you to unleash your creativity upon it, unless otherwise marked. 
+The original artists are long dead, and all copyright has expired (I'm not a lawyer but if someone from 1880 shows up to complain I'll gladly take a piece down, and run screaming after). I don't think simply converting between formats changes that, so the stuff in this repo should still be the public domain and ready for you to unleash your creativity upon it, unless otherwise marked. 
 
 As always, do what makes you comfortable! And I'd love to see what you make.
