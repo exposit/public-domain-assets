@@ -30,7 +30,7 @@ layout: default
 											{% if file.extname == '.svg'  %}
 												{% assign xpath = file.path %}
 												{% assign epath = file.path | replace: "fulls", "eps" | replace: ".svg", ".eps" %}
-												<a href="{{epath}}"><img src="{{xpath}}" alt="image" style="max-height: 200px"/></a>
+												<a href="{{site.baseurl}}/{{epath}}"><img src="{{site.baseurl}}/{{xpath}}" alt="image" style="max-height: 15em"/></a>
 											{% endif %}
 										{% endif %}
 									{% endfor %}
@@ -45,7 +45,7 @@ layout: default
 											{% if file.extname == '.svg'  %}
 												{% assign xpath = file.path %}
 												{% assign epath = file.path | replace: "fulls", "eps" | replace: ".svg", ".eps" %}
-												<a href="{{epath}}"><img src="{{xpath}}" alt="image" style="max-height: 50%"/></a>
+												<a href="{{site.baseurl}}/{{epath}}"><img src="{{site.baseurl}}/{{xpath}}" alt="image" style="max-height: 15em"/></a>
 											{% endif %}
 										{% endif %}
 									{% endfor %}
@@ -65,7 +65,7 @@ layout: default
 											{% if file.extname == '.svg'  %}
 												{% assign xpath = file.path %}
 												{% assign epath = file.path | replace: "fulls", "eps" | replace: ".svg", ".eps" %}
-												<a href="{{epath}}"><img src="{{xpath}}" alt="image" style="max-height: 15em"/></a>
+												<a href="{{site.baseurl}}/{{epath}}"><img src="{{site.baseurl}}/{{xpath}}" alt="image" style="max-height: 15em"/></a>
 											{% endif %}
 										{% endif %}
 									{% endfor %}
