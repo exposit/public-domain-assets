@@ -27,10 +27,10 @@ layout: default
 									<div class="gallery">
 
 									{% for file in site.static_files %}
-										{% if file.path contains 'fulls/' %}
+										{% if file.path contains 'svg/' %}
 											{% if file.extname == '.svg'  %}
 												{% assign xpath = file.path %}
-												{% assign epath = file.path | replace: "fulls", "eps" | replace: ".svg", ".eps" %}
+												{% assign epath = file.path | replace: "svg", "eps" %}
 												<a href="{{epath | absolute_url}}"><img src="{{xpath  | absolute_url}}" alt="image" style="max-height: 15em"/></a>
 											{% endif %}
 										{% endif %}
@@ -42,10 +42,10 @@ layout: default
 									<h3>Where Mystery Dwells</h3>
 									<div class="gallery">
 										{% for file in site.static_files %}
-										{% if file.path contains 'fulls/where mystery dwells' %}
+										{% if file.path contains 'svg/where mystery dwells' %}
 											{% if file.extname == '.svg'  %}
 												{% assign xpath = file.path %}
-												{% assign epath = file.path | replace: "fulls", "eps" | replace: ".svg", ".eps" %}
+												{% assign epath = file.path | replace: "svg", "eps" %}
 												<a href="{{epath | absolute_url}}"><img src="{{xpath  | absolute_url}}" alt="image" style="max-height: 15em"/></a>
 											{% endif %}
 										{% endif %}
@@ -62,10 +62,10 @@ layout: default
 									<h3>Miscellaneous</h3>
 									<div class="gallery">
 										{% for file in site.static_files %}
-										{% if file.path contains 'fulls/misc' %}
+										{% if file.path contains 'svg/misc' %}
 											{% if file.extname == '.svg'  %}
 												{% assign xpath = file.path %}
-												{% assign epath = file.path | replace: "fulls", "eps" | replace: ".svg", ".eps" %}
+												{% assign epath = file.path | replace: "svg", "eps" %}
 												<a href="{{epath | absolute_url}}"><img src="{{xpath  | absolute_url}}" alt="image" style="max-height: 15em"/></a>
 											{% endif %}
 										{% endif %}
