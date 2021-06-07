@@ -20,6 +20,7 @@ layout: default
 								<h1>The Art</h1>
 								<p>Click a file to save the .eps file or right click and "save image as" to get the svg file. To download them all at once, use the <a href="https://github.com/exposit/public-domain-assets">repo</a>. Either format should rescale well in your art program of choice -- I use Affinity suite.</p>
 							</header>
+
 							<ul class="tabs">
 								<li>
 									<h3>All</h3>
@@ -30,7 +31,7 @@ layout: default
 											{% if file.extname == '.svg'  %}
 												{% assign xpath = file.path %}
 												{% assign epath = file.path | replace: "fulls", "eps" | replace: ".svg", ".eps" %}
-												<a href="{{site.baseurl}}/{{epath}}"><img src="{{site.baseurl}}/{{xpath}}" alt="image" style="max-height: 15em"/></a>
+												<a href="{{epath | absolute_url}}"><img src="{{xpath  | absolute_url}}" alt="image" style="max-height: 15em"/></a>
 											{% endif %}
 										{% endif %}
 									{% endfor %}
@@ -45,7 +46,7 @@ layout: default
 											{% if file.extname == '.svg'  %}
 												{% assign xpath = file.path %}
 												{% assign epath = file.path | replace: "fulls", "eps" | replace: ".svg", ".eps" %}
-												<a href="{{site.baseurl}}/{{epath}}"><img src="{{site.baseurl}}/{{xpath}}" alt="image" style="max-height: 15em"/></a>
+												<a href="{{epath | absolute_url}}"><img src="{{xpath  | absolute_url}}" alt="image" style="max-height: 15em"/></a>
 											{% endif %}
 										{% endif %}
 									{% endfor %}
@@ -65,7 +66,7 @@ layout: default
 											{% if file.extname == '.svg'  %}
 												{% assign xpath = file.path %}
 												{% assign epath = file.path | replace: "fulls", "eps" | replace: ".svg", ".eps" %}
-												<a href="{{site.baseurl}}/{{epath}}"><img src="{{site.baseurl}}/{{xpath}}" alt="image" style="max-height: 15em"/></a>
+												<a href="{{epath | absolute_url}}"><img src="{{xpath  | absolute_url}}" alt="image" style="max-height: 15em"/></a>
 											{% endif %}
 										{% endif %}
 									{% endfor %}
