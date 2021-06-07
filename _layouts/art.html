@@ -26,31 +26,49 @@ layout: default
 									<div class="gallery">
 
 									{% for file in site.static_files %}
-										{% if file.path contains 'fulls/where mystery dwells' %}
+										{% if file.path contains 'fulls/' %}
 											{% if file.extname == '.svg'  %}
-												<a href="{{ site.baseurl }}/images/eps/where mystery dwells/{{ file.basename }}.eps"><img src="{{ site.baseurl }}/images/gallery/fulls/where mystery dwells/{{ file.basename }}.svg" alt="image" style="max-height: 15em"/></a>
+												{% assign xpath = file.path %}
+												{% assign epath = file.path | replace: "fulls", "eps" | replace: ".svg", ".eps" %}
+												<a href="{{epath}}"><img src="{{xpath}}" alt="image" style="max-height: 200px"/></a>
 											{% endif %}
 										{% endif %}
-								{% endfor %}
+									{% endfor %}
 								
 									</div>
 								</li> 
-								<!--	<li>
-									<h3>People</h3>
+								<li>
+									<h3>Where Mystery Dwells</h3>
 									<div class="gallery">
-???
+										{% for file in site.static_files %}
+										{% if file.path contains 'fulls/where mystery dwells' %}
+											{% if file.extname == '.svg'  %}
+												{% assign xpath = file.path %}
+												{% assign epath = file.path | replace: "fulls", "eps" | replace: ".svg", ".eps" %}
+												<a href="{{epath}}"><img src="{{xpath}}" alt="image" style="max-height: 50%"/></a>
+											{% endif %}
+										{% endif %}
+									{% endfor %}
 									</div>
-								</li>
+								</li><!--
 								<li>
 									<h3>Landscapes</h3>
 									<div class="gallery">
 ???
 									</div>
-								</li>
+								</li>-->
 								<li>
 									<h3>Miscellaneous</h3>
 									<div class="gallery">
-???
+										{% for file in site.static_files %}
+										{% if file.path contains 'fulls/misc' %}
+											{% if file.extname == '.svg'  %}
+												{% assign xpath = file.path %}
+												{% assign epath = file.path | replace: "fulls", "eps" | replace: ".svg", ".eps" %}
+												<a href="{{epath}}"><img src="{{xpath}}" alt="image" style="max-height: 15em"/></a>
+											{% endif %}
+										{% endif %}
+									{% endfor %}
 									</div>
 								</li>-->
 							</ul>
