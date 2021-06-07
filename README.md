@@ -13,7 +13,13 @@ This is not intended to be a comprehensive repository of all public domain asset
 
 All of these come from public domain (as in pre-1920s) works available on the [internet library](https://archive.org/) or similar museum sites. When possible I've tried to retain titles in file names, but you'll have to forgive me on the ones that passed through my Affinity workflow before I got the idea to do this repo! 
 
-All files are converted from original scanned jp2, if available, to eps, using [potrace](http://potrace.sourceforge.net/) to eps format.
+All files are converted from original scanned jp2, if available, to eps, using [potrace](http://potrace.sourceforge.net/) to eps format. The conversion to svg is using inkscape or exported through Affinity.
+
+```bash
+for file in *.eps; do
+    inkscape --export-type="svg" ${file}
+done
+```
 
 ## how to use
 

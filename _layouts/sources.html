@@ -38,7 +38,13 @@ layout: default
                                 
                             <p>All of these come from public domain (as in pre-1926) works available on the <a href="https://archive.org/">internet library</a> or similar museum sites. When possible I've tried to retain the titles in file names, but you'll have to forgive me for the ones that passed through my Affinity workflow before I got the idea to do this repo!</p>
                                 
-                            <p>All files are downloaded as original scanned jp2, if available, then converted to eps using <a href="http://potrace.sourceforge.net/">potrace</a>, and finally to svg using <a href="https://imagemagick.org/index.php">imagemagick.</a></p>
+                            <p>All files are downloaded as original scanned jp2, if available, then converted to eps using <a href="http://potrace.sourceforge.net/">potrace</a>, and finally to svg using <a href="https://imagemagick.org/index.php">imagemagick,</a> <a href="">inkscape,</a> or exported through Affinity.</p>
+
+							<p><code>
+							for file in *.eps; do
+								inkscape --export-type="svg" ${file}
+							done
+							</code></p>
 
                             <h4>some sources I favor</h4>
                             <ul  class="alt">
