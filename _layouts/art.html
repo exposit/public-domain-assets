@@ -1,0 +1,76 @@
+---
+layout: default
+---
+
+		<!-- Page wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<span class="logo"><a href="index.html">a public domain project</a> by <a href="www.hedonic.ink" style="color: #282828; font-weight: normal;">hedonic ink</a></span>
+						<a href="#menu"><span>Menu</span></a>
+					</header>
+
+				{% include nav.html %}
+
+				<!-- Main -->
+					<section id="main" class="wrapper style2">
+						<div class="inner">
+							<header class="major special">
+								<h1>The Art</h1>
+								<p>Click a file to save the .eps file or right click and "save image as" to get the svg file. To download them all at once, use the <a href="https://github.com/exposit/public-domain-assets">repo</a>. Either format should rescale well in your art program of choice -- I use Affinity suite.</p>
+							</header>
+							<ul class="tabs">
+								<li>
+									<h3>All</h3>
+									<div class="gallery">
+
+									{% for file in site.static_files %}
+										{% if file.path contains 'fulls/where mystery dwells' %}
+											{% if file.extname == '.svg'  %}
+												<a href="{{ site.baseurl }}/images/eps/where mystery dwells/{{ file.basename }}.eps"><img src="{{ site.baseurl }}/images/gallery/fulls/where mystery dwells/{{ file.basename }}.svg" alt="image" style="max-height: 15em"/></a>
+											{% endif %}
+										{% endif %}
+								{% endfor %}
+								
+									</div>
+								</li> 
+								<!--	<li>
+									<h3>People</h3>
+									<div class="gallery">
+???
+									</div>
+								</li>
+								<li>
+									<h3>Landscapes</h3>
+									<div class="gallery">
+???
+									</div>
+								</li>
+								<li>
+									<h3>Miscellaneous</h3>
+									<div class="gallery">
+???
+									</div>
+								</li>-->
+							</ul>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<section id="footer" class="wrapper">
+						<div class="inner">
+							<div class="split">
+								<div class="content">
+									{% include aboutblurb.html %}
+								</div>
+								{% include socialmedia.html %}
+							</div>
+						</div>
+					</section>
+
+					{% include copyright.html %}
+
+			</div>
+
+			{% include scripts.html %}

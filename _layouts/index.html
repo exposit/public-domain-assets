@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+		<!-- Page wrapper -->
+        <div id="page-wrapper">
+
+            <!-- Header -->
+                <header id="header" class="alt">
+                    <span class="logo"><a href="index.html">an art project</a> by <a href="www.hedonic.ink" style="font-weight: normal;">hedonic ink</a></span>
+                    <a href="#menu"><span>Menu</span></a>
+                </header>
+
+                {% include nav.html %}
+
+            <!-- Banner -->
+                <section id="banner">
+                    <div class="inner">
+                        <h1>{{} site. title }}</h1>
+                        <div class="content">
+                            <p>a curated collection of public domain assets, converted to eps format, and suitable for use in ttrpg projects</p>
+                            <ul class="actions special">
+                                <li><a href="art.html" class="button large next">the art</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+            <!-- Footer -->
+                <section id="footer" class="wrapper">
+                    <div class="inner">
+                        <div class="split">
+                            <div class="content">
+                                {% include aboutblurb.html %}
+                            </div>
+                            {% include socialmedia.html %}
+                        </div>
+                    </div>
+                </section>
+
+            {% include copyright.html %}
+
+        </div>
+
+        {% include scripts.html %}
